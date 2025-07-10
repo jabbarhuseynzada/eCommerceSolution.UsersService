@@ -19,7 +19,24 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 // bir dene mapping profilini bu sekilde qeyd etmek kifayet edirki digerlerinin de yeri mueyyenlessin
 builder.Services.AddAutoMapper(typeof(ApplicationUserMappingProfile).Assembly);
 
+
+//services.addfluentvalidation isletmek olar lakin diger butun validation profilelerin yerini gostermek ucun asagidaki method kifayetdir
 builder.Services.AddFluentValidationAutoValidation();
+
+//API explorer service
+builder.Services.AddEndpointsApiExplorer();
+
+//Add swagger generation service to create swagger spesification
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder => {
+        builder.WithOrigins("http://localhost:4200")
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -27,6 +44,12 @@ var app = builder.Build();
 app.UseExceptionHandlingMiddleware();
 
 app.UseRouting();
+
+app.UseSwagger();
+app.UseSwaggerUI();
+//app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthentication();
 app.UseAuthentication();

@@ -1,7 +1,8 @@
-﻿using System.Data;
+﻿using Microsoft.Extensions.Configuration;
 using Npgsql;
-using Microsoft.Extensions.Configuration;
+using System.Data;
 
+namespace eCommerce.Infrastructure.DbContext;
 public class DapperDbContext
 {
     private readonly IConfiguration _configuration;

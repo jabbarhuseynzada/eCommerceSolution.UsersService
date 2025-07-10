@@ -10,5 +10,6 @@ public interface IUserService
 {
     public Task<AuthenticationResponse> Login(LoginRequest loginRequest);
     public Task<AuthenticationResponse> Register(RegisterRequest registerRequest);
+    public Task<List<AuthenticationResponse>> GetUsers();
 
 }
