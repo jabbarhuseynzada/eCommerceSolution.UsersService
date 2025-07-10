@@ -23,7 +23,7 @@
 	<img src="https://img.shields.io/badge/JWT-000000.svg?style=flat&logo=JSON%20web%20tokens&logoColor=white" alt="JWT">
 	<img src="https://img.shields.io/badge/PostgreSQL-336791.svg?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
 	<img src="https://img.shields.io/badge/Redis-DC382D.svg?style=flat&logo=redis&logoColor=white" alt="Redis">
-	<img src="https://img.shields.io/badge/Docker-2496ED.svg?style=flat&logo=docker&logoColor=white" alt="Docker">
+
 	<img src="https://img.shields.io/badge/Swagger-85EA2D.svg?style=flat&logo=swagger&logoColor=black" alt="Swagger">
 </p>
 
@@ -39,7 +39,6 @@
   - [🔖 Prerequisites](#-prerequisites)
   - [⚙️ Installation](#️-installation)
   - [🤖 Usage](#-usage)
-  - [🧪 Testing](#-testing)
 - [📊 Project Roadmap](#-project-roadmap)
 - [🤝 Contributing](#-contributing)
 - [🎗 License](#-license)
@@ -94,37 +93,27 @@ This service follows Domain-Driven Design (DDD) principles and implements CQRS p
 ```sh
 └── eCommerceSolution.UsersService/
     ├── src/
-    │   ├── Application/
-    │   │   ├── Commands/
-    │   │   ├── Queries/
-    │   │   ├── DTOs/
-    │   │   ├── Interfaces/
-    │   │   └── Services/
-    │   ├── Domain/
-    │   │   ├── Entities/
-    │   │   ├── Enums/
-    │   │   ├── Events/
-    │   │   └── ValueObjects/
-    │   ├── Infrastructure/
-    │   │   ├── Data/
-    │   │   ├── Repositories/
-    │   │   ├── Services/
-    │   │   └── Migrations/
-    │   └── API/
-    │       ├── Controllers/
-    │       ├── Middleware/
-    │       ├── Extensions/
-    │       └── Configuration/
-    ├── tests/
-    │   ├── UnitTests/
-    │   ├── IntegrationTests/
-    │   └── TestData/
-    ├── docker/
-    │   ├── Dockerfile
-    │   └── docker-compose.yml
-    └── docs/
-        ├── api/
-        └── deployment/
+    └── ├── Application/
+        │   ├── Commands/
+        │   ├── Queries/
+        │   ├── DTOs/
+        │   ├── Interfaces/
+        │   └── Services/
+        ├── Domain/
+        │   ├── Entities/
+        │   ├── Enums/
+        │   ├── Events/
+        │   └── ValueObjects/
+        ├── Infrastructure/
+        │   ├── Data/
+        │   ├── Repositories/
+        │   ├── Services/
+        │   └── Migrations/
+        └── API/
+            ├── Controllers/
+            ├── Middleware/
+            ├── Extensions/
+            └── Configuration/
 ```
 
 ---
@@ -182,7 +171,6 @@ Before running this project, ensure you have the following installed:
 - **.NET 8.0 SDK** or later
 - **PostgreSQL 14+** or **SQL Server 2019+**
 - **Redis 6.0+** (for caching)
-- **Docker** (optional, for containerized deployment)
 
 ### ⚙️ Installation
 
@@ -204,20 +192,6 @@ Before running this project, ensure you have the following installed:
 >
 > ```bash
 > dotnet restore
-> ```
-
-<h4>Using <code>Docker</code></h4>
-
-> 1. Build the Docker image:
->
-> ```bash
-> docker build -t ecommerce-users-service .
-> ```
->
-> 2. Run with Docker Compose:
->
-> ```bash
-> docker-compose up -d
 > ```
 
 ### 🤖 Usage
@@ -257,34 +231,6 @@ Before running this project, ensure you have the following installed:
 >
 > ```bash
 > dotnet run --project src/API
-> ```
-
-<h4>Using <code>Docker</code></h4>
-
-> Run the service with Docker Compose:
->
-> ```bash
-> docker-compose up --build
-> ```
-
-### 🧪 Testing
-
-<h4>Run the test suite using the following command:</h4>
-
-> ```bash
-> dotnet test
-> ```
-
-<h4>Run tests with coverage:</h4>
-
-> ```bash
-> dotnet test --collect:"XPlat Code Coverage"
-> ```
-
-<h4>Run integration tests:</h4>
-
-> ```bash
-> dotnet test --filter Category=Integration
 > ```
 
 ---
@@ -360,8 +306,6 @@ This project is protected under the [MIT](https://choosealicense.com/licenses/mi
 - **[ASP.NET Core](https://docs.microsoft.com/aspnet/core/)**: For providing the robust web framework
 - **[Entity Framework Core](https://docs.microsoft.com/ef/core/)**: For excellent ORM capabilities
 - **[JWT](https://jwt.io/)**: For secure authentication standards
-- **[Redis](https://redis.io/)**: For high-performance caching solutions
-- **[Docker](https://www.docker.com/)**: For containerization and deployment simplicity
 
 ---
 
