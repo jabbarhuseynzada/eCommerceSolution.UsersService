@@ -22,8 +22,6 @@
 	<img src="https://img.shields.io/badge/Entity%20Framework-5C2D91.svg?style=flat&logo=.net&logoColor=white" alt="Entity Framework">
 	<img src="https://img.shields.io/badge/JWT-000000.svg?style=flat&logo=JSON%20web%20tokens&logoColor=white" alt="JWT">
 	<img src="https://img.shields.io/badge/PostgreSQL-336791.svg?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
-	<img src="https://img.shields.io/badge/Redis-DC382D.svg?style=flat&logo=redis&logoColor=white" alt="Redis">
-
 	<img src="https://img.shields.io/badge/Swagger-85EA2D.svg?style=flat&logo=swagger&logoColor=black" alt="Swagger">
 </p>
 
